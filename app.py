@@ -152,4 +152,12 @@ if st.button("Analyze"):
             st.subheader("🔍 Analysis")
             st.write(f"**Detected Language:** {lang}")
             st.write(f"**Category:** {category_result['category']}")
-            st.write(f"**Confidence:**
+            st.write(f"**Confidence:**{category_result['confidence']}")
+
+        with col2:
+            st.subheader("📝 Summary")
+            st.write(summary)
+
+            if translate_to_english and lang != "en":
+                st.subheader("Translated Summary (English)")
+                st.write(summary)
